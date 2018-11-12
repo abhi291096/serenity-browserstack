@@ -42,6 +42,7 @@ public class BrowserStackSerenityDriver implements DriverSource {
                 capabilities.setCapability(key.replace("bstack_", ""), environmentVariables.getProperty(key));
                 if (key.equals("bstack_browserstack.local") && environmentVariables.getProperty(key).equalsIgnoreCase("true")) {
                     System.setProperty("browserstack.local", "true");
+                    capabilities.setCapability("browserstack.localIdentifier","randomstring123456");
                 }
             } else if (environment != null && key.startsWith("environment." + environment)) {
                 capabilities.setCapability(key.replace("environment." + environment + ".", ""), environmentVariables.getProperty(key));
