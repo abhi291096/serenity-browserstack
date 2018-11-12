@@ -36,7 +36,6 @@ public class BrowserStackSerenityTest {
             bsLocal = new Local();
             Map<String, String> bsLocalArgs = new HashMap<String, String>();
             bsLocalArgs.put("key", accessKey);
-            bsLocalArgs.put("localIdentifier", "randomstring123456");
             bsLocal.start(bsLocalArgs);
         }
     }
